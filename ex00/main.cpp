@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:22:48 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/04/18 18:36:15 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/04/19 10:16:16 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 	clapTrap.beRepaired(3);
 	clapTrap.attack("Pikachu");
 	clapTrap.takeDamage(10);
-	clapTrap.beRepaired(5);
+	//clapTrap.beRepaired(5);
+	clapTrap.attack("Pikachu");
 	return (0);
 }
