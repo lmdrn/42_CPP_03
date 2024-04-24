@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:18:19 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/04/19 18:26:08 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:08:14 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 ClapTrap::ClapTrap()
 {
-	this->_name = "defaultClap";
+	this->_name = "Anonymous";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "ClapTrap " << "\x1b[32m" << _name << "\x1b[0m" << " constructor by default has been called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& _name)
-: _name(_name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+: _name(_name)
 {
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "ClapTrap " << "\x1b[32m" << _name << "\x1b[0m" << " constructor has been called!" << std::endl;
 }
 
@@ -39,12 +45,7 @@ ClapTrap::~ClapTrap(void)
 ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
 {
 	if (this != &copy)
-	{
-		_name = copy._name;
-		_hitPoints = copy._hitPoints;
-		_energyPoints = copy._energyPoints;
-		_attackDamage = copy._attackDamage;
-	}
+	{}
 	return (*this);
 }
 

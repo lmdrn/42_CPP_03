@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 15:55:32 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/04/19 18:21:49 by lmedrano         ###   ########.fr       */
+/*   Created: 2024/04/24 13:32:59 by lmedrano          #+#    #+#             */
+/*   Updated: 2024/04/24 14:20:26 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include <string>
 #include <iostream>
+#include <string>
 
 class DiamondTrap : public FragTrap, public ScavTrap
 {
@@ -35,8 +35,9 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		//operateur d'affection
 		DiamondTrap& operator=(const DiamondTrap& copy);
 		//methods
-		void	whoAmI(void) const;
-		using	ScavTrap::attack;
+		void	attack(const std::string& target);
+		void	whoAmI(void);
+
 };
 
 #endif

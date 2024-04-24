@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:27:38 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/04/19 17:37:48 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:03:53 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@
 #include <string>
 #include <iostream>
 
-class	ScavTrap : public ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
+	protected:
+		static const int	_subHitPoints;
+		static const int	_subEnergyPoints;
+		static const int	_subAttackDamage;
 	public:
 		//constructeur par default
 		ScavTrap ();
@@ -33,6 +37,7 @@ class	ScavTrap : public ClapTrap
 		ScavTrap& operator=(const ScavTrap& copy);
 		//methods
 		void	guardGate();
+		void	attack(const std::string& target);
 };
 
 #endif

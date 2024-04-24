@@ -6,7 +6,7 @@
 #    By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/10 17:47:44 by lmedrano          #+#    #+#              #
-#    Updated: 2024/04/18 18:18:01 by lmedrano         ###   ########.fr        #
+#    Updated: 2024/04/24 13:32:43 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ ORANGE 		= \033[38;5;215m
 GREEN 		= \033[38;5;82m
 RESET 		= \033[0m
 
-SRCS 		= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
+SRCS 		= ClapTrap.cpp ScavTrap.cpp Fragtrap.cpp DiamondTrap.cpp main.cpp
 
 OBJS 		= ${SRCS:.c=.o}
 
-NAME		= fixed
+NAME		= diamond
 
 CC 			= c++
 
